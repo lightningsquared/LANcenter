@@ -2,13 +2,11 @@ class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
 
   # GET /events
-  # GET /events.json
   def index
     @events = Event.all
   end
 
   # GET /events/1
-  # GET /events/1.json
   def show
   end
 
@@ -22,7 +20,6 @@ class EventsController < ApplicationController
   end
 
   # POST /events
-  # POST /events.json
   def create
     @event = Event.new(event_params)
 
@@ -34,7 +31,6 @@ class EventsController < ApplicationController
   end
 
   # PATCH/PUT /events/1
-  # PATCH/PUT /events/1.json
   def update
     if @event.update(event_params)
       redirect_to @event, notice: 'Event was successfully updated.'
@@ -44,7 +40,6 @@ class EventsController < ApplicationController
   end
 
   # DELETE /events/1
-  # DELETE /events/1.json
   def destroy
     @event.destroy
     redirect_to events_url, notice: 'Event was successfully destroyed.'
