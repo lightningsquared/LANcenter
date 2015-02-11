@@ -26,24 +26,20 @@ class EventsController < ApplicationController
   def create
     @event = Event.new(event_params)
 
-    respond_to do |format|
-      if @event.save
-        redirect_to @event, notice: 'Event was successfully created.'
-      else
-        render :new
-      end
+    if @event.save
+      redirect_to @event, notice: 'Event was successfully created.'
+    else
+      render :new
     end
   end
 
   # PATCH/PUT /events/1
   # PATCH/PUT /events/1.json
   def update
-    respond_to do |format|
-      if @event.update(event_params)
-        redirect_to @event, notice: 'Event was successfully updated.'
-      else
-        render :edit
-      end
+    if @event.update(event_params)
+      redirect_to @event, notice: 'Event was successfully updated.'
+    else
+      render :edit
     end
   end
 
@@ -51,9 +47,7 @@ class EventsController < ApplicationController
   # DELETE /events/1.json
   def destroy
     @event.destroy
-    respond_to do |format|
-      redirect_to events_url, notice: 'Event was successfully destroyed.'
-    end
+    redirect_to events_url, notice: 'Event was successfully destroyed.'
   end
 
   private
