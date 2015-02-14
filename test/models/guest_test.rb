@@ -34,4 +34,9 @@ class GuestTest < ActiveSupport::TestCase
     assert @ariel.checked_in?
     refute @zack.checked_in?
   end
+
+  test 'checked in at time should be present if checked in' do
+    @ariel.checked_in_at = nil
+    refute @ariel.valid?
+  end
 end

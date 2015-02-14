@@ -24,13 +24,13 @@ ActiveRecord::Schema.define(version: 20150214061317) do
   create_table "guests", force: :cascade do |t|
     t.string   "name"
     t.string   "email"
-    t.integer  "attendance_status"
+    t.integer  "attendance_status", default: 0
     t.datetime "checked_in_at"
     t.integer  "event_id"
     t.string   "student_status"
     t.boolean  "newsletter_opt_in"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
   end
 
   add_index "guests", ["event_id"], name: "index_guests_on_event_id"
