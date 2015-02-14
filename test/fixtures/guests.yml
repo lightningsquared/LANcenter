@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+zack:
+  name: Zack Hanni
+  email: zack.hanni@gmail.com
+  attendance_status: 0
+  checked_in_at: ~
+  event: dragonlan_1
+  student_status: Not a Drexel Student
+  newsletter_opt_in: false
+
+ariel:
+  name: Ariel Kirkwood
+  email: ariel.kirkwood@me.com
+  attendance_status: 1
+  checked_in_at: 2015-02-14 12:52:05
+  event: dragonlan_1
+  student_status: Alumnus
+  newsletter_opt_in: true
